@@ -21,10 +21,12 @@
 wp-config.php
 
 # Example themes
-/wp-content/themes/twenty*/
+
+!/wp-content/themes/twentytwentyfive/
+
 
 # Example plugin
-/wp-content/plugins/hello.php
+!/wp-content/plugins/wp-graphql
 
 # Uploads
 /wp-content/uploads/
