@@ -4,23 +4,6 @@ This repository contains my implementation for the **"WordPress Developer"** tec
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Setup Instructions](#setup-instructions)
-  - [WordPress Setup](#wordpress-setup)
-  - [WPGraphQL Plugin](#wpgraphql-plugin)
-  - [Custom Post Type: Articles](#custom-post-type-articles)
-  - [React Front-End](#react-front-end)
-- [Screenshots](#screenshots)
-- [Usage](#usage)
-- [Notes](#notes)
-- [Contact](#contact)
-
----
-
 ## Overview
 
 This project demonstrates:
@@ -46,7 +29,7 @@ This project demonstrates:
 / (repository root)
 ├── wp-content/
 │   └── themes/
-│       └── twentytwentyfive/  # Custom theme modifications (if applicable)
+│       └── twentytwentyfive/ 
 ├── article/  # React front-end project folder
 │   ├── src/
 │   │   ├── ArticleList.js
@@ -125,12 +108,11 @@ This project demonstrates:
 
 Include the following images (update the paths as necessary):
 
-- **WordPress Dashboard with Custom Post Type:** `![image](https://github.com/user-attachments/assets/daf82588-7592-4bca-8c61-f4a2f6d36c14)
-`
-- **React Article Listing Page:** `![image](https://github.com/user-attachments/assets/67a93bdc-3f14-4614-a14b-d18d73ed64ce)
-- **React Single Article Page** `![image](https://github.com/user-attachments/assets/fb9949c6-d856-4dfc-acb3-372107b23e12)
-`
-`
+- **WordPress Dashboard with Custom Post Type:** ![image](https://github.com/user-attachments/assets/b6d0e9bd-92a1-4a3a-8b99-f3ff9ed25382)
+- **React Article Listing Page:** ![image](https://github.com/user-attachments/assets/67a93bdc-3f14-4614-a14b-d18d73ed64ce)
+- **React Single Article Page** ![image](https://github.com/user-attachments/assets/fb9949c6-d856-4dfc-acb3-372107b23e12)
+
+
 
 ---
 
@@ -171,4 +153,3 @@ LinkedIn: [Himal Panta](#)
 
 ---
 
-Feel free to adjust any sections to better fit your project details or personal style.
