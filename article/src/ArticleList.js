@@ -25,20 +25,14 @@ const GET_ARTICLES = gql`
 const PAGE_SIZE = 2;
 
 const ArticleList = () => {
-  // currentPage starts at 1; for page 1, we use "after" = null.
   const [currentPage, setCurrentPage] = useState(1);
-  // pageCursors maps a page number to the "after" value required to fetch that page.
-  // For page 1, we use null.
   const [pageCursors, setPageCursors] = useState({ 1: null });
 
-  // Use the stored cursor for the current page as a variable.
   const { loading, error, data, refetch } = useQuery(GET_ARTICLES, {
     variables: { first: PAGE_SIZE, after: pageCursors[currentPage] },
     fetchPolicy: 'cache-and-network'
   });
 
-  // When new data arrives, if there's a next page and we haven't recorded its cursor,
-  // update our pageCursors to include the next page's cursor.
   useEffect(() => {
     if (data && data.articles && data.articles.pageInfo.hasNextPage) {
       const nextPage = currentPage + 1;
@@ -56,14 +50,12 @@ const ArticleList = () => {
 
   const articles = data.articles.edges;
 
-  // When a user clicks a page number, update currentPage and refetch data.
   const handlePageClick = (pageNumber) => {
     if (pageNumber === currentPage) return;
     setCurrentPage(pageNumber);
     refetch({ first: PAGE_SIZE, after: pageCursors[pageNumber] });
   };
 
-  // Determine how many page buttons to show based on the pages fetched so far.
   const totalFetchedPages = Object.keys(pageCursors).length;
 
   return (
